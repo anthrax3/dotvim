@@ -374,6 +374,7 @@ let g:syntastic_mode_map = { 'passive_filetypes': ['html'] }
 let g:syntastic_perl_checkers = ['perl']
 let g:syntastic_enable_perl_checker = 1
 " - disable creating binaries in current dir
+let g:syntastic_go_checkers = ['go']
 let g:syntastic_go_go_build_args = '-o /dev/null'
 " - переход к следующей/предыдущей ошибке: <F12>/<F11>
 imap <silent> <F11>	<C-O>:execute "try<Bar>lprev<Bar>catch<Bar>lclose<Bar>endtry"<CR>
@@ -481,6 +482,7 @@ let g:go_fmt_command = "goimports"
 let g:go_fmt_fail_silently = 1
 let g:go_doc_keywordprg_enabled = 0
 let g:go_highlight_trailing_whitespace_error = 0
+let g:go_template_autocreate = 0
 autocmd FileType go nmap <buffer> <nowait> <Leader>r     <Plug>(go-run)
 autocmd FileType go nmap <buffer> <nowait> <Leader>b     <Plug>(go-build)
 autocmd FileType go nmap <buffer> <nowait> <Leader>t     <Plug>(go-test)
